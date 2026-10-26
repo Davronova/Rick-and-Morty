@@ -1,0 +1,23 @@
+import CharacterListPage from "./pages/CharacterListPage.jsx";
+import {BrowserRouter, Routes,Route} from "react-router-dom";
+import CharacterDetailPage from "./pages/CharacterDetailPage.jsx";
+
+
+
+function App() {
+  return (
+      <>
+        <BrowserRouter>
+
+          <Routes>
+
+            <Route path="/" element={<CharacterListPage/>} />
+              <Route path="/characters/:id" element={<CharacterDetailPage/>} />
+
+          </Routes>
+        </BrowserRouter>
+      </>
+  )
+}
+
+export default App;
